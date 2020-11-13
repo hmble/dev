@@ -1,0 +1,15 @@
+/* CSS HEX */
+:root {
+  --mint-green: #82ff9eff;
+  --blue-jeans: #4bb3fdff;
+  --magnolia: #fffaffff;
+  --orange-soda: #fc5130ff;
+  --rich-black-fogra-39: #050401ff;
+
+  /* CSS HSL */
+  --mint-green: hsla(133, 100%, 75%, 1);
+  --blue-jeans: hsla(205, 98%, 64%, 1);
+  --magnolia: hsla(300, 100%, 99%, 1);
+  --orange-soda: hsla(10, 97%, 59%, 1);
+  --rich-black-fogra-39: hsla(45, 67%, 1%, 1);
+}

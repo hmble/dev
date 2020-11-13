@@ -1,0 +1,45 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* CSS HEX */
+:root {
+  --mint-green: #82ff9eff;
+  --blue-jeans: #4bb3fdff;
+  --magnolia: #fffaffff;
+  --orange-soda: #fc5130ff;
+  --rich-black-fogra-39: #050401ff;
+
+  /* CSS HSL */
+  --mint-green: hsla(133, 100%, 75%, 1);
+  --blue-jeans: hsla(205, 98%, 64%, 1);
+  --magnolia: hsla(300, 100%, 99%, 1);
+  --orange-soda: hsla(10, 97%, 59%, 1);
+  --rich-black-fogra-39: hsla(45, 67%, 1%, 1);
+}
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  margin: 1rem;
+}
+
+header {
+  padding: 1rem;
+  margin: 0 0.5rem;
+  border-bottom: 2px solid var(--orange-soda);
+}
+ul {
+  list-style: none;
+}
+.post-card {
+  margin: 1rem;
+  padding: 1.5rem;
+  border-radius: 7px;
+  width: 700px;
+  height: 200px;
+  border: 1px solid gray;
+}
