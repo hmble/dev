@@ -2,17 +2,15 @@
 title: "How to use rename unix utility command"
 date: 2020-11-13T07:44:37+05:30
 slug: "how-to-use-rename-unix-utility-command"
-description: "Is blog post me hum unix rename command k baare me sikhenge."
+description: "In this blog post we are going to learn about rename unix command"
 ---
 
 
-Aaj hum `rename` command k perl version k baare me padenge.
+Today we will learn about perl version of `rename` command.
 
-Hum perl version of `rename` command ka use saare whitespace character ko ek
-sath remove ya change karne k liye use kar sakte. Lets see an example jaha hum
-se jyada files jinke name me whitespace hai usse `-` change kaise kar sakte.
+We can use perl version of `rename` command to batch change whitespace to any character we like.
 
-Us se pahle lets see how we can install perl version of rename.
+First lets see how we can install perl version of rename.
 
 ## Install `rename` in Ubuntu
 
@@ -33,8 +31,7 @@ $ sudo yum install prename
 $ sudo pacman -s perl-rename
 {{</clicommand>}}
 
-Considering k aapne successfully rename command install kar li ab hum dekhte k
-hai k batch rename kaise kar sakte.
+Now that we have rename package lets see how we can batch rename files.
 
 ## Remove whitespace from a filename
 
@@ -46,5 +43,7 @@ $ rename 'y/ /-/g' *.txt
 ## Test to check for long whitespace 
 
 {{<clicommand>}}
-$ rename 'y/ /-/g' *.txt
+$ rename 'y/ /-/g' *.txt Now that we have rename package lets see how we can batch rename files.
+
+This is another command
 {{</clicommand>}}
