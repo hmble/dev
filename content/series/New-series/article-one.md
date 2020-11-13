@@ -8,3 +8,6 @@ series: "New-series"
 ---
 
 In series page
+
+{{<series>}}
+
