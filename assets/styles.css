@@ -42,9 +42,13 @@ p {
 }
 
 p > code {
-  @apply text-indigo-700 bg-indigo-700 bg-opacity-25 px-1 rounded;
+  @apply text-purple-600 bg-purple-600 bg-opacity-25 px-1 rounded;
 }
 
+/* For links in generated markdown */
+p > a {
+  @apply text-purple-500 underline;
+}
 @screen lg {
   .post {
     max-width: 800px;
