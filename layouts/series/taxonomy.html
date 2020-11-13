@@ -1,12 +1,10 @@
-This is a taxonomy page
+{{define "main"}}
 
-{{.Title}}
-
-
-{{.Content}}
-
-
-
-{{range .Data.Pages}}
-<p><a href="{{.Page.Permalink}}">{{.Page.Params.title}}</a></p>
+<div class="post mx-auto">
+  <div class="flex justify-center"><h1 class=" font-semibold">{{.Params.title}}</h1></div>
+  {{.Content}}
+  {{range .Data.Pages}}
+  <p><a href="{{.Page.Permalink}}">{{.Page.Params.title}}</a></p>
+  {{end}}
+</div>
 {{end}}
