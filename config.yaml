@@ -1,6 +1,6 @@
-baseURL                : http://example.org/
-languageCode           : en-in
-title                  : hmbledev blog by Samyak
+baseURL : http://example.org/
+languageCode : en-in
+title : hmbledev blog by Samyak
 DefaultContentLanguage : en-in
 
 languages:
@@ -11,3 +11,7 @@ languages:
     languageName: Hinglish
     weight: 1
 
+
+taxonomies:
+  tag: tags
+  series: series
