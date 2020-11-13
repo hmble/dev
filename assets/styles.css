@@ -73,4 +73,11 @@ navbar > a {
 .navbar-red {
   @apply bg-red-600 text-red-600;
 }
+
+.series-el {
+  @apply bg-purple-200 p-2;
+
+  border-bottom: 3px solid #d6bcfa;
+}
+
 @tailwind utilities;
