@@ -14,20 +14,20 @@ se jyada files jinke name me whitespace hai usse `-` change kaise kar sakte.
 
 Us se pahle lets see how we can install perl version of rename.
 
-## Install `rename` in Ubuntu
+## Install rename in Ubuntu
 
 {{<clicommand>}}
 $ sudo apt install rename
 {{</clicommand>}}
 
 
-## Install `rename` in Centos or Fedora 
+## Install rename in Centos or Fedora 
 
 {{<clicommand>}}
 $ sudo yum install prename
 {{</clicommand>}}
 
-## Install `rename` in Arch Linux 
+## Install rename in Arch Linux 
 
 {{<clicommand>}}
 $ sudo pacman -s perl-rename
@@ -37,13 +37,6 @@ Considering k aapne successfully rename command install kar li ab hum dekhte k
 hai k batch rename kaise kar sakte.
 
 ## Remove whitespace from a filename
-
-{{<clicommand>}}
-$ rename 'y/ /-/g' *.txt
-{{</clicommand>}}
-
-
-## Test to check for long whitespace 
 
 {{<clicommand>}}
 $ rename 'y/ /-/g' *.txt
