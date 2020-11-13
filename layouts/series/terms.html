@@ -5,7 +5,7 @@
 <ol class="list-decimal">
   {{range $series:= .Data.Terms.ByCount}}
   <li>
-    <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> {{ .Count }}
+    <a href="{{ .Page.Permalink }}">{{ .Page.Title | title}}</a> ({{.Count}} PART SERIES)
 
     
     <ul class="ml-4 list-disc">
