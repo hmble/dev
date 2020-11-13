@@ -1,0 +1,12 @@
+This is a taxonomy page
+
+{{.Title}}
+
+
+{{.Content}}
+
+
+
+{{range .Data.Pages}}
+<p><a href="{{.Page.Permalink}}">{{.Page.Params.title}}</a></p>
+{{end}}
