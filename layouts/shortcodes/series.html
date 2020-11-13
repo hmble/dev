@@ -1,9 +1,12 @@
 <!-- https://www.realjenius.com/2017/08/07/series-list-with-hugo/ -->
 {{ $series := or (.Get 0) $.Page.Params.series }}
+{{ $scratch := newScratch }}
+{{ $scratch.Set "count" 0}}
 <div class="well">
-  <div class="bg-purple-600 p-2 rounded">{{$series}}</div>
+  <div class="flex flex-col">
     {{ range $ind,$art := $.Site.Pages }}
     {{ if eq $art.Params.series $series }}
+      {{ $scratch.Add "count" 1}}
       {{ if eq $art.Permalink $.Page.Permalink}}
       <div class="bg-purple-400 p-2">{{ add $ind 1}} <a href="{{ $art.Permalink }}">{{ $art.Params.title }}</a></div>
       {{ else }}
@@ -11,4 +14,6 @@
       {{ end }}
     {{end}}
     {{end}}
+    <div class="bg-purple-600 p-2 rounded order-first">{{$series}} ({{$scratch.Get "count"}})</div>
+  </div>
 </div>
