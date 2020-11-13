@@ -12,20 +12,20 @@ We can use perl version of `rename` command to batch change whitespace to any ch
 
 First lets see how we can install perl version of rename.
 
-## Install `rename` in Ubuntu
+## Install rename in Ubuntu
 
 {{<clicommand>}}
 $ sudo apt install rename
 {{</clicommand>}}
 
 
-## Install `rename` in Centos or Fedora 
+## Install rename in Centos or Fedora 
 
 {{<clicommand>}}
 $ sudo yum install prename
 {{</clicommand>}}
 
-## Install `rename` in Arch Linux 
+## Install rename in Arch Linux 
 
 {{<clicommand>}}
 $ sudo pacman -s perl-rename
@@ -39,11 +39,3 @@ Now that we have rename package lets see how we can batch rename files.
 $ rename 'y/ /-/g' *.txt
 {{</clicommand>}}
 
-
-## Test to check for long whitespace 
-
-{{<clicommand>}}
-$ rename 'y/ /-/g' *.txt Now that we have rename package lets see how we can batch rename files.
-
-This is another command
-{{</clicommand>}}
