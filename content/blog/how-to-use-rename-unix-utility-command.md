@@ -2,7 +2,7 @@
 title: "How to use rename unix utility command"
 date: 2020-11-13T07:44:37+05:30
 slug: "how-to-use-rename-unix-utility-command"
-draft: true
+description: "Is blog post me hum unix rename command k baare me sikhenge."
 ---
 
 
