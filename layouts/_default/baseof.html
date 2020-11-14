@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>hmbledev blog by Samyak</title>
     <link rel="stylesheet" href="{{ "tail.css" | absURL}}" />
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine.min.js" defer></script>
   </head>
   <body class="bg-gray-200">
-    {{partial "navbar.html" .}}
+    {{partial "navbar2.html" .}}
     <main id="content">
       {{ block "main" . }}{{ end }}
     </main>

@@ -1,0 +1,87 @@
+<!-- https://codepen.io/Wohin/pen/QWbBdYd -->
+<nav x-data="{ open: false }" class="bg-purple-600 lg:max-w-screen-lg lg:mx-auto
+  md:m-4 lg:rounded-lg">
+  <div class="px-2 sm:px-6 ">
+    <div class="relative flex items-center justify-between h-16">
+        <div>
+            <a
+              href="{{"/" | absURL}}"
+              class="px-2 py-1 rounded-md text-xl font-semibold leading-5 text-white focus:outline-none focus:text-white focus:bg-purple-900 transition duration-150 hover:bg-purple-700 ease-in-out"
+              >hmble.dev</a
+            >
+        </div>
+      <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
+        <button
+          @click="open = !open"
+          class="inline-flex items-center justify-center p-2 mx-2 rounded-md text-purple-400 hover:text-white hover:bg-purple-700 focus:outline-none focus:bg-purple-700 focus:text-white transition duration-150 ease-in-out"
+        >
+          <svg
+            class="h-6 w-6"
+            stroke="currentColor"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              :class="{'hidden': open, 'inline-flex': !open }"
+              class="inline-flex"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+            <path
+              :class="{'hidden': !open, 'inline-flex': open }"
+              class="hidden"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start"
+      >
+        <div class="hidden sm:block sm:ml-6">
+          <div class="flex">
+            <a
+              href="{{"/series" | absURL}}"
+              class="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-purple-300 hover:text-white hover:bg-purple-700 focus:outline-none focus:text-white focus:bg-purple-700 transition duration-150 ease-in-out"
+              >Series</a
+            >
+            <a
+              href="{{"/blog" | absURL}}"
+              class="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-purple-300 hover:text-white hover:bg-purple-700 focus:outline-none focus:text-white focus:bg-purple-700 transition duration-150 ease-in-out"
+              >Blog</a>
+
+            <a
+              href="{{"/about" | absURL}}"
+              class="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-purple-300 hover:text-white hover:bg-purple-700 focus:outline-none focus:text-white focus:bg-purple-700 transition duration-150 ease-in-out"
+              >About</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- dropdown k content ka container -->
+  <div :class="{'block': open, 'hidden': !open}" class="hidden sm:hidden">
+    <div class="px-4 pt-2 pb-3">
+      <a
+        href="{{"/series" | absURL}}"
+        class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-purple-300 hover:text-white hover:bg-purple-700 focus:outline-none focus:text-white focus:bg-purple-700 transition duration-150 ease-in-out"
+        >Series</a
+      >
+      <a
+        href="{{"/blog" | absURL}}"
+        class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-purple-300 hover:text-white hover:bg-purple-700 focus:outline-none focus:text-white focus:bg-purple-700 transition duration-150 ease-in-out"
+        >Blog</a
+      >
+      <a
+        href="{{"/about" | absURL}}"
+        class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-purple-300 hover:text-white hover:bg-purple-700 focus:outline-none focus:text-white focus:bg-purple-700 transition duration-150 ease-in-out"
+        >About</a
+      >
+    </div>
+  </div>
+</nav>
