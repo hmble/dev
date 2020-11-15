@@ -3,7 +3,7 @@
   {{.Content}}
   <div>
     <ul class="m-2 px-2">
-    {{range where .Site.RegularPages "Section" "==" "blog"}}
+    {{range where .Site.RegularPages "Section" "!=" "about"}}
         <div class="bg-gray-100 p-4 mb-5 my-1  rounded-md shadow-md">
           <li>
                 <h2 class="text-2xl mb-1 ml-2 font-semibold">{{.Title}}</h2>
