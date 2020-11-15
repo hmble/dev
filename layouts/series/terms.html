@@ -7,7 +7,7 @@
   <li class="ml-2 ">
     <a class="font-bold" href="{{ .Page.Permalink }}">{{ .Page.Title | title}}</a> ({{.Count}} PART SERIES)
     <ul class="ml-4 list-disc">
-    {{range $ind,$art := $series.Pages}}
+    {{range $ind,$art := ( $series.Pages ).Reverse}}
 
     <li class="ml-4"><a class="text-purple-400"href="{{ $art.Permalink }}">{{ $art.Params.title }}</a></li>
     {{end}}
