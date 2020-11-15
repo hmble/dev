@@ -3,7 +3,7 @@
 {{ $scratch := newScratch }}
 {{ $scratch.Set "count" 0}}
   <div class="flex flex-col ">
-    {{ range $ind,$art := $.Site.Pages }}
+    {{ range $ind,$art := ( $.Site.Pages ).Reverse }}
     {{ if eq $art.Params.series $series }}
       {{ $scratch.Add "count" 1}}
       {{ if eq $art.Permalink $.Page.Permalink}}

@@ -36,7 +36,7 @@
       x-transition:enter-end="opacity-100"
       x-transition:leave="transition ease-in duration-200"
       x-transition:leave-end="opacity-0"> 
-        {{ range $ind,$art := $.Site.Pages }}
+        {{ range $ind,$art := ( $.Site.Pages ).Reverse }}
         {{ if eq $art.Params.series $series }}
           {{ $scratch.Add "count" 1}}
           {{ if eq $art.Permalink $.Page.Permalink}}
