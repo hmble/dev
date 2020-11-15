@@ -5,10 +5,8 @@
     <h1 class="font-semibold">{{.Params.title}}</h1>
   </div>
 
-  <span
-    class="text-bold text-sm text-gray-700"
-    >{{.Date.Format "Jan 2, 2006"}}</span
-  >
+  <span class="text-bold text-sm text-gray-700">{{.Date.Format "Jan 2, 2006"}}</span>
+  <span class="font-black">&middot;</span>{{partial "readingtime.html" .}} 
   {{if .IsTranslated}}
   {{ range.Translations }}
   <p class="mt-2">

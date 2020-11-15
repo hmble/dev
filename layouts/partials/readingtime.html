@@ -1,0 +1,2 @@
+{{ $readTime := cond (gt .ReadingTime 1) "minutes" "minute" }}
+<span class="text-bold text-sm text-gray-700">{{ .ReadingTime }} {{ $readTime }} read.</span>
