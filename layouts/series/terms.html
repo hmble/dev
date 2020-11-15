@@ -1,21 +1,19 @@
 {{define "main"}}
 <div class="post mx-auto">
-<div class="flex justify-center"><h1>List of series of blog posts</h1></div>
   
-<ol class="list-decimal">
   {{range $series:= .Data.Terms.ByCount}}
-  <li>
-    <a href="{{ .Page.Permalink }}">{{ .Page.Title | title}}</a> ({{.Count}} PART SERIES)
-
-    
+<div class="flex justify-center"><h1>List of series of blog posts</h1></div>
+<ol class="list-decimal">
+  <li class="ml-2 ">
+    <a class="font-bold" href="{{ .Page.Permalink }}">{{ .Page.Title | title}}</a> ({{.Count}} PART SERIES)
     <ul class="ml-4 list-disc">
     {{range $ind,$art := $series.Pages}}
 
-    <li><a class="text-purple-500 underline"href="{{ $art.Permalink }}">{{ $art.Params.title }}</a></li>
+    <li class="ml-4"><a class="text-purple-400"href="{{ $art.Permalink }}">{{ $art.Params.title }}</a></li>
     {{end}}
     </ul>
   </li>
-  {{end}}
 </ol>
+  {{end}}
 </div>
 {{end}}

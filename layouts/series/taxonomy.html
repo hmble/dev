@@ -3,8 +3,11 @@
 <div class="post mx-auto">
   <div class="flex justify-center"><h1 class=" font-semibold">{{.Params.title}}</h1></div>
   {{.Content}}
+  <h3>List of articles in this series</h3>
+  <ul class="list-disc">
   {{range .Data.Pages}}
-  <p><a href="{{.Page.Permalink}}">{{.Page.Params.title}}</a></p>
+  <li class="ml-8"><a class="text-purple-500"href="{{.Page.Permalink}}">{{.Page.Params.title}}</a></li>
   {{end}}
+  </ul>
 </div>
 {{end}}
