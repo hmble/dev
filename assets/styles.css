@@ -74,10 +74,9 @@ navbar > a {
   @apply bg-red-600 text-red-600;
 }
 
-.series-el {
-  @apply bg-purple-200 p-2;
-
-  border-bottom: 3px solid #d6bcfa;
+.vsplit {
+  border: 1px solid theme(purple-500);
+  border-top: none;
 }
 
 @tailwind utilities;
