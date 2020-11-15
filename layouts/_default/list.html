@@ -1,0 +1,39 @@
+{{define "main"}}
+
+<main class="container p-2 lg:w-2/3 mx-auto" aria-role="main">
+  {{.Content}}
+  <div>
+    <ul class="m-2 px-2">
+      {{range .Pages}}
+      <div class="bg-gray-100 p-4 mb-5 my-1 rounded-md shadow-md">
+        <li>
+          <h2 class="text-2xl mb-1 ml-2 font-semibold">{{.Title}}</h2>
+          <p class="text mb-1 ml-2">{{.Params.description}}</p>
+          <div class="flex">
+            <a href="{{.Permalink}}">
+              <span
+                class="mt-3 py-1 px-2 rounded-sm cursor-pointer text-purple-500 font-semibold"
+              >
+                Read More
+              </span>
+            </a>
+            {{if .IsTranslated}}
+            {{ range.Translations }}
+            <a href="{{.Permalink}}">
+              <span
+                class="mt-3 py-1 px-2 rounded-sm cursor-pointer text-purple-500 font-semibold"
+              >
+                Read more in {{.Language.LanguageName}}
+              </span>
+            </a>
+            {{ end }}
+            {{ end }}
+          </div>
+        </li>
+      </div>
+      {{end}}
+    </ul>
+  </div>
+</main>
+
+{{ end }}
