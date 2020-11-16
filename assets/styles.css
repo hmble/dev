@@ -79,4 +79,8 @@ navbar > a {
   border-top: none;
 }
 
+p > img {
+  @apply mx-auto;
+}
+
 @tailwind utilities;
