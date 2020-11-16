@@ -1,7 +1,17 @@
 baseURL : https://hmble.dev 
 languageCode : en-in
 title : hmbledev blog by Samyak
+description: A blog for those who want to read programming content in English
 DefaultContentLanguage : en-in
+enableRobotsTXT: true
+canonifyURLs: true
+
+sitename: hmbledev
+paginate: 10
+github: hmble
+twitter: hmbledev
+author: Samyak Bakliwal
+themecolor: "#D53F8C"
 
 languages:
   en:

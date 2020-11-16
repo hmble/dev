@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="{{.Language}}">
-  <head>
+<html prefix="og: http://ogp.me/ns#" lang="{{.Language}}">
+  <head itemscope itemtype ="{{ .Site.BaseURL }}">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>hmbledev blog by Samyak</title>
+    {{partial "meta.html" .}}
     <link rel="stylesheet" href="{{ "tail.css" | absURL}}" />
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine.min.js" defer></script>
   </head>
