@@ -5,6 +5,7 @@ description: A blog for those who want to read programming content in English
 DefaultContentLanguage : en-in
 enableRobotsTXT: true
 canonifyURLs: true
+googleAnalytics: G-K1HYKY4MFT
 
 sitename: hmbledev
 paginate: 10
