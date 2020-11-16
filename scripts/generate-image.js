@@ -56,5 +56,6 @@ ctx.fillText("hmble.dev", 416, 520);
 const buffer = canvas.toBuffer("image/png");
 
 let temp = text.replace("?", "").trim();
+temp = temp.replace(":", "").trim();
 temp = temp.replace(/\s/g, "-").toLowerCase();
 fs.writeFileSync(`./static/featured/${temp}.png`, buffer);
