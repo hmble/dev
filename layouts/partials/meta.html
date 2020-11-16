@@ -38,6 +38,7 @@
 {{ with.Params.image }}
 <meta itemprop="image" content="{{- printf "%s.png" ( . | absURL ) }}" />
 <meta property="og:image" content="{{- printf "%s.png" ( . | absURL ) }}" />
+<meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="{{- printf "%s.png" ( . | absURL ) }}" />
 <meta name="twitter:image:src" content="{{- printf "%s.png" ( . | absURL ) }}" />
 {{ end }}
