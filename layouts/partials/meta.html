@@ -36,15 +36,10 @@
 
 <!-- Image tags -->
 {{ with.Params.image }}
-<meta itemprop="image" content="{{ . | absURL }}" />
-<meta property="og:image" content="{{ . | absURL }}" />
-<meta name="twitter:image" content="{{ . | absURL }}" />
-<meta name="twitter:image:src" content="{{ . | absURL }}" />
-{{ else }}
-<meta itemprop="image" content="{{ .Site.Params.ogimage | absURL }}" />
-<meta property="og:image" content="{{ .Site.Params.ogimage | absURL }}" />
-<meta name="twitter:image" content="{{ .Site.Params.ogimage | absURL }}" />
-<meta name="twitter:image:src" content="{{ .Site.Params.ogimage | absURL }}" />
+<meta itemprop="image" content="{{- printf "%s.png" ( . | absURL ) }}" />
+<meta property="og:image" content="{{- printf "%s.png" ( . | absURL ) }}" />
+<meta name="twitter:image" content="{{- printf "%s.png" ( . | absURL ) }}" />
+<meta name="twitter:image:src" content="{{- printf "%s.png" ( . | absURL ) }}" />
 {{ end }}
 
 <!-- Date tags -->
@@ -100,6 +95,7 @@
     <meta name="author" content="{{humanize . }}" /> 
   {{ end }}
 
+
   <script defer type="application/ld+json">
     {
       "@context": "http://schema.org",
@@ -116,7 +112,7 @@
       "dateModified": "{{ .Lastmod.Format "2006-01-02" }}",
       "image": {
         "@type": "imageObject",
-        "url": "{{ with .Params.image }}{{ .Permalink }}{{ end }}"
+        "url": "{{if .Params.image}}{{- printf "%s.png" ( .Params.image | absURL )}}{{end}}"
       },
       "publisher": {
         "@type": "Organization",

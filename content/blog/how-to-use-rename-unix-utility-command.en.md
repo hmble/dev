@@ -2,6 +2,7 @@
 title: "How to use rename unix utility command ?"
 date: 2020-11-13T07:44:37+05:30
 slug: "how-to-use-rename-unix-utility-command"
+image: "/featured/how-to-use-rename-unix-utility-command"
 description: "In this blog post we are going to learn about rename unix command"
 ---
 
