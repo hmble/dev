@@ -1,9 +1,9 @@
 ---
-title: "Introduction"
+title: "Learn git basics: Introduction"
 date: 2020-11-16T10:31:52+05:30
 slug: "introduction"
 draft: false
-
+description: Is series me hum git basic commands k baare me padhenge.
 series: "Learn git basics"
 ---
 
