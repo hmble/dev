@@ -42,12 +42,12 @@ p {
 }
 
 p > code {
-  @apply text-purple-600 bg-purple-600 bg-opacity-25 px-1 rounded;
+  @apply text-purple-700 bg-purple-200 bg-opacity-45 px-1 rounded;
 }
 
 /* For links in generated markdown */
 p > a {
-  @apply text-purple-500 underline;
+  @apply text-purple-700 underline;
 }
 @screen lg {
   .post {
