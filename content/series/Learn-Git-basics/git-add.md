@@ -2,7 +2,7 @@
 title: "What is git add command ?"
 date: 2020-11-16T10:57:33+05:30
 slug: "git-add"
-draft: true
+draft: false
 
 series: "Learn git basics"
 ---
