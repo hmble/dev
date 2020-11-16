@@ -1,8 +1,8 @@
 ---
-title: "Indroduction"
+title: "Introduction"
 date: 2020-11-16T10:31:52+05:30
-slug: "indroduction"
-draft: true
+slug: "introduction"
+draft: false
 
 series: "Learn git basics"
 ---
