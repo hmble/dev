@@ -1,8 +1,9 @@
 {{define "main"}}
 <div class="post mx-auto">
   
+  {{if .Data.Terms.ByCount}}
   {{range $series:= .Data.Terms.ByCount}}
-<div class="flex justify-center"><h1>List of series of blog posts</h1></div>
+<div class="flex justify-center"><h1 role="heading" aria-label="List of series of blog posts">List of series of blog posts</h1></div>
 <ol class="list-decimal">
   <li class="ml-2 ">
     <a class="font-bold" href="{{ .Page.Permalink }}">{{ .Page.Title | title}}</a> ({{.Count}} PART SERIES)
@@ -15,5 +16,9 @@
   </li>
 </ol>
   {{end}}
+
+{{else}}
+<div class="flex justify-center"><h1 role="heading" aria-label="Currently there are no series" >Currently there are no series</h1></div>
+{{end}}
 </div>
 {{end}}
