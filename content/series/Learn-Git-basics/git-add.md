@@ -30,3 +30,35 @@ Git have four different areas of code in current repository.
 
   ![image for git tree](/images/git-tree.png)
 
+
+We use `git add` command to add our working changes to staging area.
+
+- **To add selected files :**
+
+```bash
+$ git add <filenames> 
+```
+
+- **To add all tracked files :**
+```bash
+$ git add -A 
+```
+
+OR we can use a shorthand `.` for -A
+
+```bash
+$ git add .
+``` 
+
+We can also use path regex with `git add` to add only files matching certain
+path regex.
+
+Lets say we want to add all `.txt` files in folder we add them by using regex
+pattern
+
+```bash
+$ git add \*.txt
+```
+
+
+
