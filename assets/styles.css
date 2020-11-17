@@ -50,6 +50,7 @@ p > code {
 p > a {
   @apply text-purple-700 underline;
 }
+
 @screen lg {
   .post {
     max-width: 800px;
