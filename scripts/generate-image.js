@@ -59,3 +59,4 @@ let temp = text.replace("?", "").trim();
 temp = temp.replace(":", "").trim();
 temp = temp.replace(/\s/g, "-").toLowerCase();
 fs.writeFileSync(`./static/featured/${temp}.png`, buffer);
+console.log(`Image is created at \n ./static/featured/${temp}.png`);
