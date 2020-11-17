@@ -7,10 +7,10 @@
       {{range .Pages}}
       <div class="bg-gray-100 p-4 mb-5 my-1 rounded-md shadow-md">
         <li>
-          <h2 class="text-2xl mb-1 ml-2 font-semibold">{{.Title}}</h2>
+          <h2 role="heading" aria-label="{{.Title}}"class="text-2xl mb-1 ml-2 font-semibold">{{.Title}}</h2>
           <p class="text mb-1 ml-2">{{.Params.description}}</p>
           <div class="flex">
-            <a href="{{.Permalink}}">
+            <a role="link" aria-label="Read more link"href="{{.Permalink}}">
               <span
                 class="mt-3 py-1 px-2 rounded-sm cursor-pointer text-purple-500 font-semibold"
               >
@@ -19,7 +19,7 @@
             </a>
             {{if .IsTranslated}}
             {{ range.Translations }}
-            <a href="{{.Permalink}}">
+            <a role="link" aria-label="Read more link" href="{{.Permalink}}">
               <span
                 class="mt-3 py-1 px-2 rounded-sm cursor-pointer text-purple-500 font-semibold"
               >

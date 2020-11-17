@@ -5,6 +5,7 @@
     <div class="relative flex items-center justify-between h-16">
         <div>
             <a
+              role="link" aria-label="homepage link"
               href="{{"/" | absURL}}"
               class="px-2 py-1 rounded-md text-xl font-semibold leading-5 text-white focus:outline-none focus:text-white focus:bg-purple-900 transition duration-150 hover:bg-purple-700 ease-in-out"
               >hmble.dev</a
@@ -17,7 +18,7 @@
         >
           <svg
             class="h-6 w-6"
-            stroke="currentColor"
+            stroke="white"
             fill="none"
             viewBox="0 0 24 24"
           >
@@ -45,17 +46,21 @@
       >
         <div class="hidden sm:block sm:ml-6">
           <div class="flex">
+
             <a
+              role="link" aria-label="Link to blog page"
+              href="{{"/blog" | absURL}}"
+              class="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-white hover:text-white hover:bg-purple-700 focus:outline-none focus:text-white focus:bg-purple-700 transition duration-150 ease-in-out"
+              >Blog</a>
+            <a
+              role="link" aria-label="Link to series page"
               href="{{"/series" | absURL}}"
               class="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-white hover:text-white hover:bg-purple-700 focus:outline-none focus:text-white focus:bg-purple-700 transition duration-150 ease-in-out"
               >Series</a
             >
-            <a
-              href="{{"/blog" | absURL}}"
-              class="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-white hover:text-white hover:bg-purple-700 focus:outline-none focus:text-white focus:bg-purple-700 transition duration-150 ease-in-out"
-              >Blog</a>
 
             <a
+              role="link" aria-label="Link to about page"
               href="{{"/about" | absURL}}"
               class="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-white hover:text-white hover:bg-purple-700 focus:outline-none focus:text-white focus:bg-purple-700 transition duration-150 ease-in-out"
               >About</a>
@@ -67,17 +72,22 @@
   <!-- dropdown k content ka container -->
   <div :class="{'block': open, 'hidden': !open}" class="hidden sm:hidden">
     <div class="px-4 pt-2 pb-3">
+
       <a
-        href="{{"/series" | absURL}}"
-        class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-white hover:text-white hover:bg-purple-700 focus:outline-none focus:text-white focus:bg-purple-700 transition duration-150 ease-in-out"
-        >Series</a
-      >
-      <a
+        role="link" aria-label="Link to blog page"
         href="{{"/blog" | absURL}}"
         class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-white hover:text-white hover:bg-purple-700 focus:outline-none focus:text-white focus:bg-purple-700 transition duration-150 ease-in-out"
         >Blog</a
       >
       <a
+
+        role="link" aria-label="Link to series page"
+        href="{{"/series" | absURL}}"
+        class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-white hover:text-white hover:bg-purple-700 focus:outline-none focus:text-white focus:bg-purple-700 transition duration-150 ease-in-out"
+        >Series</a
+      >
+      <a
+        role="link" aria-label="Link to about page"
         href="{{"/about" | absURL}}"
         class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-white hover:text-white hover:bg-purple-700 focus:outline-none focus:text-white focus:bg-purple-700 transition duration-150 ease-in-out"
         >About</a
