@@ -56,6 +56,19 @@ p > a {
     max-width: 800px;
   }
 }
+
+.highlight {
+  @apply my-4 text-sm;
+}
+
+.lntd > .chroma {
+  padding: 0;
+}
+
+.chroma {
+  @apply p-2 rounded-md overflow-x-auto;
+}
+
 /* 
  *   This feature is not curerntly in tailwind 
  *   https://github.com/tailwindlabs/tailwindcss/issues/1042 
