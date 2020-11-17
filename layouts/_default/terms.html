@@ -1,0 +1,18 @@
+{{ define "main" }}
+  <div class="post mx-auto">
+    <div class="flex justify-center"><h1 role="heading" aria-label="Tags heading">{{ .Title }}</h1></div>
+    <ul class="list-disc">
+      {{ $type := .Type }}
+      {{ range $key, $value := .Data.Terms.Alphabetical }}
+      {{ $name := .Name }}
+      {{ $count := .Count }}
+      {{ with $.Site.GetPage (printf "/%s/%s" $type $name) }}
+        <li>
+          <a class="terms-title text-purple-700" href="{{ .Permalink }}">{{ .Name }}</a>
+          <span> ({{ $count }})</span>
+        </li>
+      {{ end }}
+      {{ end }}
+    </ul>
+  </div>
+{{ end }}

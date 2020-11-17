@@ -4,6 +4,7 @@ date: 2020-11-13T07:44:37+05:30
 slug: "how-to-use-rename-unix-utility-command"
 image: "/featured/how-to-use-rename-unix-utility-command"
 description: "Is blog post me hum unix rename command k baare me sikhenge."
+tags: unix
 ---
 
 {{<unsplash "npxXWgQ33ZQ" "Glenn Carstens-Peters" "https://unsplash.com/@glenncarstenspeters">}}
