@@ -6,6 +6,7 @@ image: "/featured/how-to-use-rename-unix-utility-command"
 description: "Is blog post me hum unix rename command k baare me sikhenge."
 ---
 
+{{<unsplash "npxXWgQ33ZQ" "Glenn Carstens-Peters" "https://unsplash.com/@glenncarstenspeters">}}
 
 Aaj hum `rename` command k perl version k baare me padenge.
 
