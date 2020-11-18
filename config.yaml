@@ -15,6 +15,9 @@ twitter: hmbledev
 author: Samyak Bakliwal
 themecolor: "#D53F8C"
 
+services:
+  rss:
+    limit: 15
 markup:
   goldmark:
     renderer:
