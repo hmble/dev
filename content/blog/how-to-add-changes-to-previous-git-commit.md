@@ -4,9 +4,17 @@ date: 2020-11-18T10:22:00+05:30
 slug: "how-to-add-changes-to-previous-git-commit"
 image: "/featured/how-to-add-changes-to-previous-git-commit.png"
 tags: git
+description: "Learn how to add changes to previous commit without editing commit
+message"
+unsplash: 
+  id: "YSVI6tLRrz4"
+  name: "Rod Long" 
+  crediturl: "https://source.unsplash.com/YSVI6tLRrz4"
 
-draft: true
 ---
+
+{{<unsplash>}}
+
 Sooo aapne koi changes commit kiye aur ab aapko us commit me aur changes add
 karne hai, well lets use magic of git.
 
