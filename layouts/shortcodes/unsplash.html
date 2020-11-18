@@ -1,8 +1,9 @@
+{{with .Page.Params.unsplash}}
 <img
   role="img"
-  aria-label="Unsplash picture by {{(.Get 1)}}"
+  aria-label="Unsplash picture by {{.name}}"
   class="rounded-md mb-2"
-  src="https://source.unsplash.com/{{( .Get 0 )}}"
+  src="https://source.unsplash.com/{{.id}}"
   alt="Unsplash image"
 />
 <div class="flex justify-center">
@@ -12,8 +13,9 @@
       class="font-bold"
       role="link"
       aria-label="credit link to unsplash creator"
-      href="{{(.Get 2)}}"
-      >{{(.Get 1)}}</a
+      href="{{.crediturl}}"
+      >{{.name}}</a
     >
   </span>
 </div>
+{{end}}
