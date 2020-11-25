@@ -2,7 +2,7 @@
 title: "Learn git basic in hindi"
 date: 2020-11-20T16:17:46+05:30
 slug: "learn-git-basic-in-hindi"
-image: "/featured/learn-git-basic-in-hindi"
+image: "/featured/learn-git-basics-in-hindi"
 
 ---
 ## Git add
