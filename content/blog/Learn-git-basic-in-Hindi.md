@@ -52,62 +52,85 @@ git add command ka use working tree changes ko stage karne k liye hota.
 
     With this options hum patch operation perform kar sakte.
 
-    - NOTE: patch operation sirf selected hunk stage karta hai and remaining unstaged changes still working tree me rehte hai.
+    {{<note>}}
+        patch operation sirf selected hunk stage karta hai and remaining unstaged
+        changes still working tree me rehte hai.
+    {{</note>}}
 
     - How to do git add interactively ?
 
-        **command :** 
+    **command :** 
 
-        `$ git add -i`
+    `$ git add -i`
 
-        Waise to ye command ka jyada use nahi hota. So maine ise jyada explain nahi kiya. This command gives you few options to run interactively
+    Waise to ye command ka jyada use nahi hota. So maine ise jyada explain nahi kiya. This command gives you few options to run interactively
 
-        ```diff
-        *** Commands ***
-              1: status       2: update       3: revert       4: add untracked
-              5: patch        6: diff         7: quit         8: help
-            What now> 1
-        ```
+    ```diff
+    *** Commands ***
+          1: status       2: update       3: revert       4: add untracked
+          5: patch        6: diff         7: quit         8: help
+        What now> 1
+    ```
 
-        If aapko interactive mode k baare me aur padhna ho to you can visit [official documentation]([https://git-scm.com/docs/git-add#_interactive_mode](https://git-scm.com/docs/git-add#_interactive_mode))
+    If aapko interactive mode k baare me aur padhna ho to you can visit [official documentation]([https://git-scm.com/docs/git-add#_interactive_mode](https://git-scm.com/docs/git-add#_interactive_mode))
 
-        ## Git commit
+    ## Git commit
 
-        In order to commit snapshot of staged changes hum `git commit` ka use karte.
+    In order to commit snapshot of staged changes hum `git commit` ka use karte.
 
-        - `git commit`
+    - `git commit`
 
-            This command will launch a text editor to add a commit message. By default this launches [vi]([https://en.wikipedia.org/wiki/Vi](https://en.wikipedia.org/wiki/Vi)) text editor. If aapko preferred text editor set karna hai to you can set it by setting `$EDITOR` variable.
+        This command will launch a text editor to add a commit message. By default this launches [vi]([https://en.wikipedia.org/wiki/Vi](https://en.wikipedia.org/wiki/Vi)) text editor. If aapko preferred text editor set karna hai to you can set it by setting `$EDITOR` variable.
 
-            If aap `bash` use kar rahe ho to you can add `export EDITOR=<path-to-editor>` .
+        If aap `bash` use kar rahe ho to you can add `export EDITOR=<path-to-editor>` .
 
-            For example to set vim as a default editor for git commit you can add
+        For example to set vim as a default editor for git commit you can add
 
-            `export EDITOR="/usr/bin/vim"` to your `.bashrc`
+        `export EDITOR="/usr/bin/vim"` to your `.bashrc`
 
-        - `git commit -m`
+    - `git commit -m`
 
-            Is command se aap small commit message pass kar sakte. Ye command run karne k baad git text editor launch nahi karega. This comes in handy jab aapko koi small commit message likhna ho.
+        Is command se aap small commit message pass kar sakte. Ye command run karne k baad git text editor launch nahi karega. This comes in handy jab aapko koi small commit message likhna ho.
 
-            For example. `git commit -m "fix suggested changes"`.
+        For example. `git commit -m "fix suggested changes"`.
 
-        - `git commit -a`
+    - `git commit -a`
 
-            Ye command tracked files k changes ko automatically stage karke commit message k liye k text editor open karegi. You can use `git commit -am` if aapko small commit message add karna ho to.
+        Ye command tracked files k changes ko automatically stage karke commit message k liye k text editor open karegi. You can use `git commit -am` if aapko small commit message add karna ho to.
 
-        - `git commit --amend`
+    - `git commit --amend`
 
-            Is command se hum staged changes previous commit me add kar sakte hai. You can learn more about this [here]([https://hmble.dev/blog/how-to-add-changes-to-previous-git-commit/](https://hmble.dev/blog/how-to-add-changes-to-previous-git-commit/))
+        Is command se hum staged changes previous commit me add kar sakte hai. You can learn more about this [here]([https://hmble.dev/blog/how-to-add-changes-to-previous-git-commit/](https://hmble.dev/blog/how-to-add-changes-to-previous-git-commit/))
 
-        ## Git push
 
-        After commit changes hum apne local repository k changes remote repository me push karne k liye `git push`  command ka use karte hai. Lets discuss a bit more about this command.
+    ## Git push
 
-        To push our changes to our remote origin branch we can use
+    After commit changes hum apne local repository k changes remote repository me push karne k liye `git push`  command ka use karte hai. Lets discuss a bit more about this command.
 
-        `git push -u origin <branch-name>`
+    To push our changes to our remote origin branch we can use
 
-        here option `-u` hamare current branch ki upstream tracking branch with name `<branch-name>` set karega and then changes us remote branch me push karega. 
+    `git push -u origin <branch-name>`
 
-        After setting upstream hume next push k liye `-u` flag use karne ki jarurat nahi.
+    here option `-u` hamare current branch ki upstream tracking branch with name `<branch-name>` set karega and then changes us remote branch me push karega. 
+
+    After setting upstream hume next push k liye `-u` flag use karne ki jarurat nahi.
+
+    ## Git pull
+
+    Ab tak aapko pata chal hi gaya hoga k git ek distributed version control
+    system hai. So aapke remote repository me kisi aur ne submit kiya hua code local repository me lene k liye hum `git pull` use karte hai.
+
+    {{<note>}}
+        It is always a good thing to keep your local changes up to date with master/main branch.
+    {{</note>}}
+
+    **command:**
+
+    `$ git pull origin main`
+
+    After running this command git remote `origin/main` branch se changes local repository me pull karega.
+
+    In simple terms `git pull` command under the hood `git fetch` followed by
+    `git merge` karta. This is useful jab aapko remote changes merge karne se
+    pahle check karna ho. You can learn more about this [here](https://stackoverflow.com/a/292359)
 
