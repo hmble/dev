@@ -46,6 +46,9 @@ p > code {
   @apply text-purple-700 bg-purple-200 bg-opacity-45 px-1 rounded;
 }
 
+.single-post ul {
+  @apply list-disc list-outside;
+}
 /* For links in generated markdown */
 p > a {
   @apply text-purple-700 underline;
