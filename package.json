@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cssbuild": "cross-env NODE_ENV=\"production\" gulp cssbuild"
+    "cssbuild": "cross-env NODE_ENV=\"production\" gulp cssbuild",
+    "serve": "hugo serve --watch -D --port 3000 --disableFastRender --ignoreCache --noHTTPCache --path-warnings --gc --renderToDisk",
+    "watch": "gulp watch"
   },
   "author": "",
   "license": "ISC",
